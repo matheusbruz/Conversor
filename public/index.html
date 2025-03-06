@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de YouTube para MP3/MP4</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Conversor de YouTube</h1>
+            <p>Converta vídeos do YouTube para MP3 ou MP4 facilmente</p>
+        </header>
+        
+        <main>
+            <div class="converter-box">
+                <div class="input-group">
+                    <input type="text" id="youtube-url" placeholder="Cole o link do YouTube aqui...">
+                    <button id="paste-button"><i class="fas fa-paste"></i></button>
+                </div>
+                
+                <div class="format-selection">
+                    <button id="mp3-button" class="format-button active">
+                        <i class="fas fa-music"></i> MP3 (Áudio)
+                    </button>
+                    <button id="mp4-button" class="format-button">
+                        <i class="fas fa-video"></i> MP4 (Vídeo)
+                    </button>
+                </div>
+                
+                <button id="convert-button" class="convert-button">
+                    <i class="fas fa-exchange-alt"></i> Converter
+                </button>
+            </div>
+            
+            <div id="result" class="result-container hidden">
+                <div class="result-header">
+                    <img id="thumbnail" src="" alt="Thumbnail do vídeo">
+                    <div class="video-info">
+                        <h3 id="video-title">Título do Vídeo</h3>
+                        <p id="video-duration">00:00</p>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <p class="status-message">Seu download está pronto</p>
+                    <button id="download-button" class="download-button">
+                        <i class="fas fa-download"></i> Baixar
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Convertendo seu vídeo...</p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Conversor de YouTube | Criado para uso pessoal</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
